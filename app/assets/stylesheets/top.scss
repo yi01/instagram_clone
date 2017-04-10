@@ -15,6 +15,10 @@ header h2{
   color: white;
 }
 
+header h2:hover{
+  opacity: 0.5;
+}
+
 
 .header-left{
   float: left;
@@ -33,9 +37,18 @@ header h2{
   margin: 0 25px;
 }
 
-.container{
+.wrapper{
+  min-height: 800px;
   background-color: rgba(211,211,221,0.2);
-  height: 800px;
+
+}
+
+.container{
+}
+
+footer{
+  text-align: center;
+
 }
 
 .clearfix:after {

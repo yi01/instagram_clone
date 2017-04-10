@@ -1,11 +1,21 @@
-<h2 style="text-align: center;"><%= @user.email %>のページ</h2>
-<div style="text-align: center;">
-  <% @user.pictures.each do |picture| %>
-  <ul class="top">
-    <li><%= picture.image %></li>
-    <li><%= picture.content %></li>
-    <%= link_to "[edit]", edit_picture_path(picture.id) %>
-    <%= link_to "[delete]", picture_path(picture.id), method: :delete %>
-  </ul>
-  <% end %>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <h2 style="text-align: center;"><%= @user.email %>のページ</h2>
+    <div style="text-align: center;">
+      <div class="row">
+        <% @user.pictures.each do |picture| %>
+        <ul class="top">
+          <div class=""  style="width: 500px; height: 300px; margin: 0 auto; border: 1px solid red;">
+            <li><%= picture.image %></li>
+            <li><%= picture.content %></li>
+            <%= link_to "[edit]", edit_picture_path(picture.id) %>
+            <%= link_to "[delete]", picture_path(picture.id), method: :delete %>
+
+          </div>
+
+        </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
